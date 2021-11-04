@@ -6,6 +6,16 @@
 #include <benchmark/benchmark.h>
 #include "hello.h"
 
+
+// use "bazel" for run tests
+// bazel run --cxxopt='-std=c++17' benchmark_name -c opt --copt=-O3
+
+// perf record ./benchmark_name
+// perf retport
+
+// ./benchmark_name --benchmark_filter=bench_name\12 --benchmark_min_time=1
+
+
 // static void BM_StringCreation(benchmark::State& state) {
 //   for (auto _ : state)
 //     std::string empty_string;
