@@ -3,6 +3,10 @@
 # $ cmake --version
 cmake_minimum_required(VERSION 3.5)
 
+# Set a default C++ compile flag
+#set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3" CACHE STRING "Set C++ Compiler Flags" FORCE)
+SET( CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -DNVALGRIND" CACHE STRING "" FORCE )
+
 # Set the project name
 project (benchmark)
 
